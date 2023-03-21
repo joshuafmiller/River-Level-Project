@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="/">
+        <a class="navbar-brand" href="/River-Level-Project">
           Home
         </a>
         <button
@@ -19,12 +19,12 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" href="/about">
+              <a class="nav-link active" href="/River-Level-Project/about">
                 About
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/contact">
+              <a class="nav-link active" href="/River-Level-Project/contact">
                 Contact
               </a>
             </li>
