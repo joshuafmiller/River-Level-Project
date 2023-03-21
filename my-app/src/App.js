@@ -8,12 +8,13 @@ import About from './components/AboutView';
 import Contact from './components/ContactView';
 import Footer from './components/Footer';
 import RiverView from './components/RiverView';
+import {useState, useEffect} from 'react';
 
 function App() {
 
 
 
-  const riverTables = [
+  let riverTables = [
     {
       name : "Big Laurel",
       ID : "03453000", //river id matching to api data
@@ -134,6 +135,60 @@ function App() {
     },
 
   ];
+
+
+
+  fetch('https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03505550,03460795,02177000,0351706800,03453500,03465500,03479000,03453000,02087183,02096960,02140510,03518500,02138500&parameterCd=00060,00065')
+  .then(response => response.json())
+  .then(data => {
+    console.log(data)
+
+    for (let i = 0; i < data.value.timeSeries.length; i++) { //looping through the json to pull out data per river(one for cfs and one for ft)
+      console.log(data.value.timeSeries[i])
+      console.log(data.value.timeSeries[i].variable.unit.unitCode)
+      console.log(data.value.timeSeries[i].values[0].value[0].value)
+      console.log(data.value.timeSeries[i].sourceInfo.siteCode[0].value)
+      for(let j = 0; j <riverTables.length; j++){ //looping through riverTables array I created so i can check against json pulled and update the data
+        if (data.value.timeSeries[i].sourceInfo.siteCode[0].value == riverTables[j].ID){ //checking to see if river ID is a match with the sitecode value
+          console.log("It's a match!");
+          console.log(data.value.timeSeries[i].sourceInfo.siteCode[0].value);
+          console.log(riverTables[j].ID);
+          // if riverTables wants cfs and the json pulled is using cfs update river level with number
+          if(riverTables[j].unit == "cfs" && data.value.timeSeries[i].variable.unit.unitCode == "ft3/s"){
+            riverTables[j].level = data.value.timeSeries[i].values[0].value[0].value;
+            console.log(riverTables[j].level)  
+
+          };
+          // if riverTables wants ft and the json pulled is using ft update river level with number
+          if(riverTables[j].unit == "ft" && data.value.timeSeries[i].variable.unit.unitCode == "ft"){
+            riverTables[j].level = data.value.timeSeries[i].values[0].value[0].value;
+            console.log(riverTables[j].level)
+          };
+          //checking to see if the river levels fall into the acceptable range or is low/high
+          if (riverTables[j].level > riverTables[j].runnableLevel[0] && riverTables[j].level < riverTables[j].runnableLevel[1]){
+            riverTables[j].runnable = "runnable"
+            console.log(riverTables[j].runnable)
+          };
+          if (riverTables[j].level > riverTables[j].runnableLevel[1]){
+            riverTables[j].runnable = "high"
+            console.log(riverTables[j].runnable)
+          };
+          if (riverTables[j].level < riverTables[j].runnableLevel[0]){
+            riverTables[j].runnable = "low"
+            console.log(riverTables[j].runnable)
+          };
+      };
+
+
+        
+    
+    }
+  }
+  
+  })
+
+
+
 
   return (
     <div>

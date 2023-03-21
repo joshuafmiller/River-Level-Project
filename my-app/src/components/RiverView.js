@@ -100,7 +100,6 @@ const RiverCard = ({ river }) => {
     };
 
 
-
 const RiverView = ({ data }) => {
   const resultsHtml = data.map((obj, i) => {
     return <RiverCard river={obj} key={i} />;
