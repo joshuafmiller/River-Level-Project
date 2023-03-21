@@ -210,15 +210,15 @@ function App() {
     <div>
       <Navbar />
       <Switch>
-        <Route path="/" exact>
+        <Route path="/River-Level-Project" exact>
           <Home />
           <FilterView />
           <RiverView data={riverTables} />
         </Route>
-        <Route path="/about">
+        <Route path="/River-Level-Project/about">
           <About />
         </Route>
-        <Route path="/contact">
+        <Route path="/River-Level-Project/contact">
           <Contact />
         </Route>
       </Switch>
