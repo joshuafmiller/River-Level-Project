@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Hero from "./Hero";
 import kayak from "./kayak.jpg";
 
@@ -19,7 +20,6 @@ const About = () => {
             </div>
             <div class= "w-25 p-3 text-center d-inline-block">
             </div>
-
         </div>
     );
 };
