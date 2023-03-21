@@ -1,5 +1,5 @@
 {
-  "homepage": "https://joshuafmiller.github.io/River-Level-Project/",
+  "homepage": "https://joshuafmiller.github.io/River-Level-Project/#",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -40,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "react-router-dom": "^5.3.4"
   }
 }

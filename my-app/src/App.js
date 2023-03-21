@@ -26,6 +26,26 @@ function App() {
         "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
     },
     {
+      name: "Big Creek Lower",
+      ID: "03512000", //river id matching to api data
+      level: null,
+      unit: "cfs", //unit of measurement for river level
+      runnableLevel: [1200, 2700], //min, max
+      runnable: null,
+      awpage:
+        "https://www.americanwhitewater.org/content/River/view/river-detail/1038/main",
+    },
+    {
+      name: "Chattooga III",
+      ID: "02177000", //river id matching to api data
+      level: null,
+      unit: "ft", //unit of measurement for river level
+      runnableLevel: [1.20, 3.00], //min, max
+      runnable: null,
+      awpage:
+        "https://www.americanwhitewater.org/content/River/view/river-detail/475/main",
+    },
+    {
       name: "Chattooga IV",
       ID: "02177000", //river id matching to api data
       level: null,
@@ -126,6 +146,16 @@ function App() {
         "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
     },
     {
+      name: "Tellico Middle",
+      ID: "03518500", //river id matching to api data
+      level: null,
+      unit: "ft", //unit of measurement for river level
+      runnableLevel: [1.40, 4.00], //min, max
+      runnable: null,
+      awpage:
+        "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
+    },
+    {
       name: "Watauga",
       ID: "03479000", //river id matching to api data
       level: null,
@@ -150,7 +180,7 @@ function App() {
   const [riverTables, setData] = useState(riverMaster);
 
   fetch(
-    "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03505550,03460795,02177000,0351706800,03453500,03465500,03479000,03453000,02087183,02096960,02140510,03518500,02138500&parameterCd=00060,00065"
+    "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03505550,03460795,02177000,0351706800,03453500,03465500,03479000,03453000,02087183,02096960,02140510,03518500,02138500,03512000&parameterCd=00060,00065"
   )
     .then((response) => response.json())
     .then((data) => {
@@ -206,24 +236,24 @@ function App() {
         }
       }
     });
-  return (
-    <div>
-      <Navbar />
-      <Switch>
-        <Route path="/River-Level-Project" exact>
-          <Home />
-          <FilterView />
-          <RiverView data={riverTables} />
-        </Route>
-        <Route path="/River-Level-Project/about">
-          <About />
-        </Route>
-        <Route path="/River-Level-Project/contact">
-          <Contact />
-        </Route>
-      </Switch>
-      <Footer />
-    </div>
+    return (
+      <div>
+        <Navbar />
+        <Switch>
+          <Route path="/River-Level-Project" exact>
+            <Home />
+            <FilterView />
+            <RiverView data={riverTables} />
+          </Route>
+          <Route path="/River-Level-Project/about">
+            <About />
+          </Route>
+          <Route path="/River-Level-Project/contact">
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
   );
 }
 
