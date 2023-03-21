@@ -11,6 +11,8 @@ import RiverView from './components/RiverView';
 
 function App() {
 
+
+
   const riverTables = [
     {
       name : "Big Laurel",
@@ -19,6 +21,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [250, 2000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
 
     },
     {
@@ -28,6 +31,7 @@ function App() {
       unit : "ft", //unit of measurement for river level
       runnableLevel : [.90, 2.50], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/476/main",
     },
     {
       name : "Cheoah",
@@ -36,6 +40,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [400, 2500], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/3146/main",
     },
     {
       name : "Falls Dam",
@@ -44,6 +49,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [650, 4000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/3869/main",
     },
     {
       name : "French Broad IX",
@@ -52,6 +58,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [700, 7000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1074/main",
     },
     {
       name : "Haw",
@@ -60,6 +67,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [1001, 12000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/2706/main",
     },
     {
       name : "Linville Gorge",
@@ -68,6 +76,7 @@ function App() {
       unit : "ft", //unit of measurement for river level
       runnableLevel : [1.70, 2.70], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
     },
     {
       name : "Nantahala",
@@ -76,6 +85,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [450, 2000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1109/main",
     },
     {
       name : "Nolichucky",
@@ -84,6 +94,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [500, 3000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1106/main",
     },
     {
       name : "Pigeon Gorge",
@@ -92,6 +103,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [300, 3000], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1108/main",
     },
     {
       name : "Tellico",
@@ -100,6 +112,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [280, 1500], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
     },
     {
       name : "Watauga",
@@ -108,6 +121,7 @@ function App() {
       unit : "cfs", //unit of measurement for river level
       runnableLevel : [150, 650], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1143/main",
     },
     {
       name : "Wilson Creek",
@@ -116,6 +130,7 @@ function App() {
       unit : "ft", //unit of measurement for river level
       runnableLevel : [2.25, 5.00], //min, max
       runnable : null,
+      awpage : "https://www.americanwhitewater.org/content/River/view/river-detail/1146/main",
     },
 
   ];
