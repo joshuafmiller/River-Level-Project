@@ -10,16 +10,16 @@ const RiverCard = ({ river, button }) => {
       
     <div class="card m-2 text-center runnable" style={{ width: "18rem", }}>
       <div class="card-body">
-        <h5 class="card-title">{river.name}</h5>
+        <h5 class="card-title fw-bolder">{river.name}</h5>
         <p class="card-text"></p>
       </div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">
+        <li class="list-group-item fw-bolder">
           {river.level}
           {river.unit}
         </li>
-        <li class="list-group-item text-success">{river.runnable}</li>
-        <li class="list-group-item">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
+        <li class="list-group-item text-success fw-bolder">{river.runnable}</li>
+        <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
       </ul>
       <div class="card-body">
         <a href={river.awpage} class="card-link">
@@ -34,16 +34,16 @@ const RiverCard = ({ river, button }) => {
         
             <div class="card m-2 text-center high" style={{ width: "18rem" }}>
               <div class="card-body">
-                <h5 class="card-title">{river.name}</h5>
+                <h5 class="card-title fw-bolder">{river.name}</h5>
                 <p class="card-text"></p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+                <li class="list-group-item fw-bolder">
                   {river.level}
                   {river.unit}
                 </li>
-                <li class="list-group-item text-danger">{river.runnable}</li>
-                <li class="list-group-item">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
+                <li class="list-group-item text-danger fw-bolder">{river.runnable}</li>
+                <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
               </ul>
               <div class="card-body">
                 <a href={river.awpage} class="card-link">
@@ -59,16 +59,16 @@ const RiverCard = ({ river, button }) => {
         
             <div class="card m-2 text-center low" style={{ width: "18rem" }}>
               <div class="card-body">
-                <h5 class="card-title">{river.name}</h5>
+                <h5 class="card-title fw-bolder">{river.name}</h5>
                 <p class="card-text"></p>
               </div>
               <ul class="list-group list-group-flush">
-                <li class="list-group-item">
+                <li class="list-group-item fw-bolder">
                   {river.level}
                   {river.unit}
                 </li>
-                <li class="list-group-item text-warning">{river.runnable}</li>
-                <li class="list-group-item">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
+                <li class="list-group-item text-primary fw-bolder">{river.runnable}</li>
+                <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
               </ul>
               <div class="card-body">
                 <a href={river.awpage} class="card-link">
