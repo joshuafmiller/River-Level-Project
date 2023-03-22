@@ -14,6 +14,7 @@ import { useState, setState } from "react";
 
 function App() {
 
+
   let riverMaster = [
     {
       name: "Big Laurel",
@@ -236,14 +237,27 @@ function App() {
         }
       }
     });
+
+  let filterValue = 1;
+
+  let [buttonPressed, setButton]= useState(filterValue)
+
+   function ChangeButton(value){
+        buttonPressed = value
+        console.log(buttonPressed)
+        setButton(buttonPressed)
+    };
+  
+    
+
     return (
       <div>
         <Navbar />
         <Switch>
           <Route path="/River-Level-Project" exact>
             <Home />
-            <FilterView />
-            <RiverView data={riverTables} />
+            <FilterView button={ChangeButton}/>
+            <RiverView data={riverTables} button={buttonPressed}/>
           </Route>
           <Route path="/River-Level-Project/about">
             <About />
