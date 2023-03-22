@@ -67,7 +67,7 @@ const RiverCard = ({ river, button }) => {
                   {river.level}
                   {river.unit}
                 </li>
-                <li class="list-group-item text-primary fw-bolder">{river.runnable}</li>
+                <li class="list-group-item text-danger fw-bolder">{river.runnable}</li>
                 <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
               </ul>
               <div class="card-body">
