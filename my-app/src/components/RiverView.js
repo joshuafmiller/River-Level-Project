@@ -1,12 +1,25 @@
 import React from "react";
 import weather from "./testweather.PNG";
+import { useState, setState } from "react";
 
-const RiverCard = ({ river, button }) => {
+const RiverCard = ({ river, button}) => {
+
+
+  let modalNumber = 1;
+  let [modalNext, setModal] = useState(modalNumber)  
+  
+      function ModalChange(value){
+      modalNext = value + 1
+      document.getElementById("exampleModal1").id = `exampleModal${modalNext}`
+      setModal(modalNext)
+      }
+
   //checking to see if the river is runnable, high, or low and will build card
   if (
     (river.runnable == "runnable" && button == 3) ||
     (river.runnable == "runnable" && button == 1)
   ) {
+    
     return (
       <div class="card m-2 text-center runnable" style={{ width: "18rem" }}>
         <a class="card-body text-decoration-none" href={river.awpage}>
@@ -28,12 +41,13 @@ const RiverCard = ({ river, button }) => {
             {river.unit}
           </li>
         </ul>
+        
 
         {/* make entire weather div a modal button */}
         <div
           type="button"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal1"
+          data-bs-target= "#exampleModal"
           class="card-body "
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
@@ -80,8 +94,11 @@ const RiverCard = ({ river, button }) => {
         </div>
         {/* end modal divs to copy */}
       </div>
+     
     );
+ 
   }
+  
   if (
     (river.runnable == "high" && button == 4) ||
     (river.runnable == "high" && button == 1)
@@ -235,11 +252,15 @@ const RiverCard = ({ river, button }) => {
       </div>
     );
   }
+  
 };
 
-const RiverView = ({ data, button }) => {
-  const cardData = data.map((obj, i) => {
-    return <RiverCard river={obj} key={i} button={button} />;
+const RiverView = ({ data, button}) => {
+
+      
+  const cardData = data.map((obj, i) => {  
+
+    return <RiverCard river={obj} key={i} button={button}/>;
   });
   return (
     <div>

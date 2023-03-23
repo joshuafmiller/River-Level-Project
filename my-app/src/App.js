@@ -840,8 +840,8 @@ useEffect(() => {
             }
             //checking to see if the river levels fall into the acceptable range or is low/high
             if (
-              riverTables[j].level > riverTables[j].runnableLevel[0] &&
-              riverTables[j].level < riverTables[j].runnableLevel[1]
+              riverTables[j].level >= riverTables[j].runnableLevel[0] &&
+              riverTables[j].level <= riverTables[j].runnableLevel[1]
             ) {
               riverTables[j].runnable = "runnable";
             }
@@ -947,6 +947,18 @@ useEffect(() =>{
         console.log(buttonPressed)
         setButton(buttonPressed)
     };
+
+
+  // let modalNumber = 1;
+  // let [modalNext, setModal] = useState(modalNumber)  
+
+  //   function ModalChange(value){
+  //     modalNext = value + 1
+
+  //    document.getElementById("exampleModal1").id = `exampleModal${modalNext}`
+
+  //     setModal(modalNext)
+  //   }
   
     if (isLoading) {
       return (
