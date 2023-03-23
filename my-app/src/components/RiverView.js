@@ -1,4 +1,5 @@
 import React from "react";
+import weather from "./testweather.PNG"
 
 
 
@@ -9,10 +10,12 @@ const RiverCard = ({ river, button }) => {
     return (
       
     <div class="card m-2 text-center runnable" style={{ width: "18rem", }}>
+      <a class="card-body text-decoration-none"href={river.awpage}>
       <div class="card-body">
         <h5 class="card-title fw-bolder">{river.name}</h5>
         <p class="card-text"></p>
       </div>
+      </a>
       <ul class="list-group list-group-flush">
         <li class="list-group-item fw-bolder">
           {river.level}
@@ -22,9 +25,16 @@ const RiverCard = ({ river, button }) => {
         <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
       </ul>
       <div class="card-body">
-        <a href={river.awpage} class="card-link">
+        {/* <a href={river.awpage} class="card-link">
           American Whitewater Page
-        </a>
+        </a> */}
+
+        {/*get weather data and when you click on the icon it will display full weather data */}
+      
+        <img src={river.weather.currentDay.icon}></img>
+        <p class="fw-bold">{river.weather.currentDay.condition}</p>
+        <p class="fw-bold">{river.weather.currentDay.temp}F</p>
+        
       </div>
     </div>
   );
@@ -33,10 +43,12 @@ const RiverCard = ({ river, button }) => {
         return (
         
             <div class="card m-2 text-center high" style={{ width: "18rem" }}>
-              <div class="card-body">
-                <h5 class="card-title fw-bolder">{river.name}</h5>
-                <p class="card-text"></p>
-              </div>
+      <a class="card-body text-decoration-none"href={river.awpage}>
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">{river.name}</h5>
+        <p class="card-text"></p>
+      </div>
+      </a>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item fw-bolder">
                   {river.level}
@@ -46,9 +58,9 @@ const RiverCard = ({ river, button }) => {
                 <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
               </ul>
               <div class="card-body">
-                <a href={river.awpage} class="card-link">
-                  American Whitewater Page
-                </a>
+              <img src={river.weather.currentDay.icon}></img>
+              <p class="fw-bold">{river.weather.currentDay.condition}</p>
+              <p class="fw-bold">{river.weather.currentDay.temp}F</p>
               </div>
             </div>
           );
@@ -58,10 +70,12 @@ const RiverCard = ({ river, button }) => {
         return (
         
             <div class="card m-2 text-center low" style={{ width: "18rem" }}>
-              <div class="card-body">
-                <h5 class="card-title fw-bolder">{river.name}</h5>
-                <p class="card-text"></p>
-              </div>
+      <a class="card-body text-decoration-none"href={river.awpage}>
+      <div class="card-body">
+        <h5 class="card-title fw-bolder">{river.name}</h5>
+        <p class="card-text"></p>
+      </div>
+      </a>
               <ul class="list-group list-group-flush">
                 <li class="list-group-item fw-bolder">
                   {river.level}
@@ -71,37 +85,15 @@ const RiverCard = ({ river, button }) => {
                 <li class="list-group-item fw-bolder">{river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}</li>
               </ul>
               <div class="card-body">
-                <a href={river.awpage} class="card-link">
-                  American Whitewater Page
-                </a>
+              <img src={river.weather.currentDay.icon}></img>
+              <p class="fw-bold">{river.weather.currentDay.condition}</p>
+              <p class="fw-bold">{river.weather.currentDay.temp}F</p>
               </div>
             </div>
           );
     }
 
-    // else {
-    //         return (
-            
-    //             <div class="card m-2 text-center" style={{ width: "18rem" }}>
-    //               <div class="card-body">
-    //                 <h5 class="card-title">{river.name}</h5>
-    //                 <p class="card-text"></p>
-    //               </div>
-    //               <ul class="list-group list-group-flush">
-    //                 <li class="list-group-item">
-    //                   {river.level}
-    //                   {river.unit}
-    //                 </li>
-    //                 <li class="list-group-item">{river.runnable}</li>
-    //               </ul>
-    //               <div class="card-body">
-    //                 <a href={river.awpage} class="card-link">
-    //                   American Whitewater Page8
-    //                 </a>
-    //               </div>
-    //             </div>
-    //           );
-    //     }
+
     };
 
 

@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, renderMatches } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -14,7 +14,7 @@ import { useState, setState } from "react";
 
 function App() {
 
-
+//master river list
   let riverMaster = [
     {
       name: "Big Laurel",
@@ -25,6 +25,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
+      weather : {
+        lat: null,
+        lon: null,
+        currentDay: {
+          temp: null,
+          condition : null,
+          icon : null,
+          precip : null,
+        },
+        forecastDay1:{
+          date: null,
+          tempMin: null,
+          tempMax: null,
+          condition : null,
+          icon : null,
+          precipTotal : null,
+          precipChance : null,
+        },
+        forecastDay2:{
+          date: null,
+          tempMin: null,
+          tempMax: null,
+          condition : null,
+          icon : null,
+          precipTotal : null,
+          precipChance : null,
+
+        },
+        forecastDay3:{
+          date: null,
+          tempMin: null,
+          tempMax: null,
+          condition : null,
+          icon : null,
+          precipTotal : null,
+          precipChance : null,
+        },
+      },
     },
     {
       name: "Big Creek Lower",
@@ -35,6 +73,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1038/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Chattooga III",
@@ -45,6 +121,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/475/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Chattooga IV",
@@ -55,6 +169,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/476/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Cheoah",
@@ -65,6 +217,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/3146/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Falls Dam",
@@ -75,6 +265,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/3869/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "French Broad IX",
@@ -85,6 +313,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1074/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Haw",
@@ -95,6 +361,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/2706/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Linville Gorge",
@@ -105,6 +409,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Nantahala",
@@ -115,6 +457,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1109/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Nolichucky",
@@ -125,6 +505,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1106/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Pigeon Gorge",
@@ -135,6 +553,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1108/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Tellico",
@@ -145,6 +601,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Tellico Middle",
@@ -155,6 +649,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Watauga",
@@ -165,6 +697,44 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1143/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
     },
     {
       name: "Wilson Creek",
@@ -175,17 +745,57 @@ function App() {
       runnable: null,
       awpage:
         "https://www.americanwhitewater.org/content/River/view/river-detail/1146/main",
+        weather : {
+          lat: null,
+          lon: null,
+          currentDay: {
+            temp: null,
+            condition : null,
+            icon : null,
+            precip : null,
+          },
+          forecastDay1:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+          forecastDay2:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+
+          },
+          forecastDay3:{
+            date: null,
+            tempMin: null,
+            tempMax: null,
+            condition : null,
+            icon : null,
+            precipTotal : null,
+            precipChance : null,
+          },
+        },
+        
     },
   ];
 
   const [riverTables, setData] = useState(riverMaster);
 
+//fetching usgs data
+useEffect(() => {
   fetch(
     "https://waterservices.usgs.gov/nwis/iv/?format=json&sites=03505550,03460795,02177000,0351706800,03453500,03465500,03479000,03453000,02087183,02096960,02140510,03518500,02138500,03512000&parameterCd=00060,00065"
   )
     .then((response) => response.json())
     .then((data) => {
-      
       //looping through the json to pull out data per river(one for cfs and one for ft)
       for (let i = 0; i < data.value.timeSeries.length; i++) {
         //looping through riverTables array I created so i can check against json pulled and update the data
@@ -196,7 +806,7 @@ function App() {
             data.value.timeSeries[i].sourceInfo.siteCode[0].value ==
             riverTables[j].ID
           ) {
-            // if riverTables wants cfs and the json pulled is using cfs update river level with number
+            // if riverTables wants cfs and the json pulled is using cfs update river level with number and lat/lon over river
             if (
               riverTables[j].unit == "cfs" &&
               data.value.timeSeries[i].variable.unit.unitCode == "ft3/s"
@@ -204,13 +814,17 @@ function App() {
                 riverTables[j].level =
                 data.value.timeSeries[i].values[0].value[0].value;
 
+                riverTables[j].weather.lon = data.value.timeSeries[i].sourceInfo.geoLocation.geogLocation.longitude;
+
+                riverTables[j].weather.lat = data.value.timeSeries[i].sourceInfo.geoLocation.geogLocation.latitude;
+  
                 //updating the state causes the page to re-render
                 //not ideal but it works
                 const newRiver = [...riverTables];
                 setData(newRiver);
 
             }
-            // if riverTables wants ft and the json pulled is using ft update river level with number
+            // if riverTables wants ft and the json pulled is using ft update river level with number and lat/lon of river
             if (
               riverTables[j].unit == "ft" &&
               data.value.timeSeries[i].variable.unit.unitCode == "ft"
@@ -218,6 +832,11 @@ function App() {
 
               riverTables[j].level =
                 data.value.timeSeries[i].values[0].value[0].value;
+
+              riverTables[j].weather.lon = data.value.timeSeries[i].sourceInfo.geoLocation.geogLocation.longitude;
+           
+              riverTables[j].weather.lat = data.value.timeSeries[i].sourceInfo.geoLocation.geogLocation.latitude;
+
             }
             //checking to see if the river levels fall into the acceptable range or is low/high
             if (
@@ -237,7 +856,65 @@ function App() {
         }
       }
     });
+  },[]);
 
+  const [weatherTables, setTable] = useState(riverTables);
+//fetching weather data
+useEffect(() =>{
+  //looping through the master river list to make api request with lat/lon of each
+  for (let i = 0; i < weatherTables.length; i++) {
+  let item = weatherTables[i]; 
+  fetch(
+    `http://api.weatherapi.com/v1/forecast.json?key=02ff44908fa541bb9ba214658232203 &q=${item.weather.lat},${item.weather.lon}&days=3&aqi=no&alerts=no`
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      //updating current day values
+      item.weather.currentDay.condition = data.current.condition.text;
+      item.weather.currentDay.temp = data.current.temp_f;
+      item.weather.currentDay.icon = data.current.condition.icon;
+      item.weather.currentDay.precip = data.current.precip_in;
+
+      
+
+      //updating day1 values
+      item.weather.forecastDay1.date = data.forecast.forecastday[0].date
+      item.weather.forecastDay1.tempMin = data.forecast.forecastday[0].day.mintemp_f
+      item.weather.forecastDay1.tempMax = data.forecast.forecastday[0].day.maxtemp_f
+      item.weather.forecastDay1.condition = data.forecast.forecastday[0].day.condition.text
+      item.weather.forecastDay1.icon = data.forecast.forecastday[0].day.condition.icon
+      item.weather.forecastDay1.precipTotal = data.forecast.forecastday[0].day.totalprecip_in
+      item.weather.forecastDay1.precipChance = data.forecast.forecastday[0].day.daily_chance_of_rain
+
+      //updating day2 values
+      item.weather.forecastDay2.date = data.forecast.forecastday[1].date
+      item.weather.forecastDay2.tempMin = data.forecast.forecastday[1].day.mintemp_f
+      item.weather.forecastDay2.tempMax = data.forecast.forecastday[1].day.maxtemp_f
+      item.weather.forecastDay2.condition = data.forecast.forecastday[1].day.condition.text
+      item.weather.forecastDay2.icon = data.forecast.forecastday[1].day.condition.icon
+      item.weather.forecastDay2.precipTotal = data.forecast.forecastday[1].day.totalprecip_in
+      item.weather.forecastDay2.precipChance = data.forecast.forecastday[1].day.daily_chance_of_rain
+
+      //updating day3 values
+      item.weather.forecastDay3.date = data.forecast.forecastday[2].date
+      item.weather.forecastDay3.tempMin = data.forecast.forecastday[2].day.mintemp_f
+      item.weather.forecastDay3.tempMax = data.forecast.forecastday[2].day.maxtemp_f
+      item.weather.forecastDay3.condition = data.forecast.forecastday[2].day.condition.text
+      item.weather.forecastDay3.icon = data.forecast.forecastday[2].day.condition.icon
+      item.weather.forecastDay3.precipTotal = data.forecast.forecastday[2].day.totalprecip_in
+      item.weather.forecastDay3.precipChance = data.forecast.forecastday[2].day.daily_chance_of_rain
+      console.log(item)
+      const newItem = [...weatherTables];
+      setTable(newItem);
+
+
+    })
+  };
+},[riverTables]);
+
+
+
+//on button click to use for filters
   let filterValue = 1;
 
   let [buttonPressed, setButton]= useState(filterValue)
@@ -248,7 +925,6 @@ function App() {
         setButton(buttonPressed)
     };
   
-    
 
     return (
       <div>
