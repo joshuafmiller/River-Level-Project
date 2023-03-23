@@ -859,8 +859,24 @@ useEffect(() => {
   },[]);
 
   const [weatherTables, setTable] = useState(riverTables);
+
+
+
+
+  const [isLoading, setLoading] = useState(true);
+
+
+
+
+
+
+
+
+
+
 //fetching weather data
 useEffect(() =>{
+  
   //looping through the master river list to make api request with lat/lon of each
   for (let i = 0; i < weatherTables.length; i++) {
   let item = weatherTables[i]; 
@@ -869,9 +885,11 @@ useEffect(() =>{
   )
     .then((response) => response.json())
     .then((data) => {
+      const newItem = [...weatherTables];
+      setTable(newItem);
       //updating current day values
       item.weather.currentDay.condition = data.current.condition.text;
-      item.weather.currentDay.temp = data.current.temp_f;
+      item.weather.currentDay.temp = (data.current.temp_f);
       item.weather.currentDay.icon = data.current.condition.icon;
       item.weather.currentDay.precip = data.current.precip_in;
 
@@ -904,13 +922,18 @@ useEffect(() =>{
       item.weather.forecastDay3.precipTotal = data.forecast.forecastday[2].day.totalprecip_in
       item.weather.forecastDay3.precipChance = data.forecast.forecastday[2].day.daily_chance_of_rain
       console.log(item)
-      const newItem = [...weatherTables];
-      setTable(newItem);
 
+      let num = i
+      console.log(num)
+
+      if (num == weatherTables.length-1) {
+        setLoading(false)
+      }
+      
 
     })
   };
-},[riverTables]);
+},[riverTables],);
 
 
 
@@ -925,6 +948,17 @@ useEffect(() =>{
         setButton(buttonPressed)
     };
   
+    if (isLoading) {
+      return (
+      <div style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+      }}>Loading the data {console.log("loading state")}</div>
+    );
+    }
 
     return (
       <div>

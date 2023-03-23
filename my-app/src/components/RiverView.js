@@ -33,7 +33,7 @@ const RiverCard = ({ river, button }) => {
       
         <img src={river.weather.currentDay.icon}></img>
         <p class="fw-bold">{river.weather.currentDay.condition}</p>
-        <p class="fw-bold">{river.weather.currentDay.temp}F</p>
+        <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
         
       </div>
     </div>
@@ -60,7 +60,7 @@ const RiverCard = ({ river, button }) => {
               <div class="card-body">
               <img src={river.weather.currentDay.icon}></img>
               <p class="fw-bold">{river.weather.currentDay.condition}</p>
-              <p class="fw-bold">{river.weather.currentDay.temp}F</p>
+              <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
               </div>
             </div>
           );
@@ -87,7 +87,7 @@ const RiverCard = ({ river, button }) => {
               <div class="card-body">
               <img src={river.weather.currentDay.icon}></img>
               <p class="fw-bold">{river.weather.currentDay.condition}</p>
-              <p class="fw-bold">{river.weather.currentDay.temp}F</p>
+              <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
               </div>
             </div>
           );
