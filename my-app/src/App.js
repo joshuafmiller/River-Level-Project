@@ -18,7 +18,8 @@ function App() {
   let riverMaster = [
     {
       name: "Big Laurel",
-      ID: "03453000", //river id matching to api data
+      ID: "03453000",
+      modal: "BigLaurel", //river id matching to api data
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [250, 2000], //min, max
@@ -66,7 +67,8 @@ function App() {
     },
     {
       name: "Big Creek Lower",
-      ID: "03512000", //river id matching to api data
+      ID: "03512000",
+      modal: "BigCreekLower", //river id matching to api data
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [1200, 2700], //min, max
@@ -114,7 +116,8 @@ function App() {
     },
     {
       name: "Chattooga III",
-      ID: "02177000", //river id matching to api data
+      ID: "02177000",
+      modal: "ChattoogaIII", //river id matching to api data
       level: null,
       unit: "ft", //unit of measurement for river level
       runnableLevel: [1.20, 3.00], //min, max
@@ -162,7 +165,8 @@ function App() {
     },
     {
       name: "Chattooga IV",
-      ID: "02177000", //river id matching to api data
+      ID: "02177000",
+      modal: "ChattoogaIV", //river id matching to api data
       level: null,
       unit: "ft", //unit of measurement for river level
       runnableLevel: [0.9, 2.5], //min, max
@@ -210,7 +214,8 @@ function App() {
     },
     {
       name: "Cheoah",
-      ID: "0351706800", //river id matching to api data
+      ID: "0351706800",
+      modal: "Cheoah", //river id matching to api data
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [400, 2500], //min, max
@@ -258,7 +263,8 @@ function App() {
     },
     {
       name: "Falls Dam",
-      ID: "02087183", //river id matching to api data
+      ID: "02087183",
+      modal: "FallsDam", //river id matching to api data
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [650, 4000], //min, max
@@ -307,6 +313,7 @@ function App() {
     {
       name: "French Broad IX",
       ID: "03453500", //river id matching to api data
+      modal: "FrenchBroadIX",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [700, 7000], //min, max
@@ -355,6 +362,7 @@ function App() {
     {
       name: "Haw",
       ID: "02096960", //river id matching to api data
+      modal: "Haw",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [1001, 12000], //min, max
@@ -402,7 +410,8 @@ function App() {
     },
     {
       name: "Linville Gorge",
-      ID: "02138500", //river id matching to api data
+      ID: "02138500",
+      modal: "LinvilleGorge", //river id matching to api data
       level: null,
       unit: "ft", //unit of measurement for river level
       runnableLevel: [1.7, 2.7], //min, max
@@ -451,6 +460,7 @@ function App() {
     {
       name: "Nantahala",
       ID: "03505550", //river id matching to api data
+      modal: "Nantahala",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [450, 2000], //min, max
@@ -499,6 +509,7 @@ function App() {
     {
       name: "Nolichucky",
       ID: "03465500", //river id matching to api data
+      modal: "Nolichucky",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [500, 3000], //min, max
@@ -547,6 +558,7 @@ function App() {
     {
       name: "Pigeon Gorge",
       ID: "03460795", //river id matching to api data
+      modal: "PigeonGorge",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [300, 3000], //min, max
@@ -595,6 +607,7 @@ function App() {
     {
       name: "Tellico",
       ID: "03518500", //river id matching to api data
+      modal: "Tellico",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [280, 1500], //min, max
@@ -643,6 +656,7 @@ function App() {
     {
       name: "Tellico Middle",
       ID: "03518500", //river id matching to api data
+      modal: "TellicoMiddle",
       level: null,
       unit: "ft", //unit of measurement for river level
       runnableLevel: [1.40, 4.00], //min, max
@@ -691,6 +705,7 @@ function App() {
     {
       name: "Watauga",
       ID: "03479000", //river id matching to api data
+      modal : "Watauga",
       level: null,
       unit: "cfs", //unit of measurement for river level
       runnableLevel: [150, 650], //min, max
@@ -739,6 +754,7 @@ function App() {
     {
       name: "Wilson Creek",
       ID: "02140510", //river id matching to api data
+      modal : "WilsonCreek",
       level: null,
       unit: "ft", //unit of measurement for river level
       runnableLevel: [2.25, 5.0], //min, max

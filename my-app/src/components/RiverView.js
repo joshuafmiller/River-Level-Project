@@ -5,17 +5,6 @@ import { useState, setState } from "react";
 const RiverCard = ({ river, button}) => {
 
 
-  // let modalNumber = 1;
-  // let [modalNext, setModal] = useState(modalNumber)  
-  
-  //     function ModalChange(value){
-  //     modalNext = value + 1
-  //     document.getElementById("exampleModal1").id = `exampleModal${modalNext}`;
-  //     document.getElementById("runnable").id = `exampleModal${modalNext}`;
-  //     setModal(modalNext)
-  //     }
-
-  //checking to see if the river is runnable, high, or low and will build card
   if (
     (river.runnable == "runnable" && button == 3) ||
     (river.runnable == "runnable" && button == 1)
@@ -48,7 +37,7 @@ const RiverCard = ({ river, button}) => {
         <div
           type="button"
           data-bs-toggle="modal"
-          data-bs-target= "#exampleModal1"
+          data-bs-target= {"#"+river.modal}
           class="card-body"
           id="runnable"
         >
@@ -59,7 +48,7 @@ const RiverCard = ({ river, button}) => {
           {/* modal popout */}
           <div
             class="modal fade"
-            id="exampleModal1"
+            id= {river.modal}
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
@@ -68,7 +57,7 @@ const RiverCard = ({ river, button}) => {
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  {river.name}
+                  {river.name} Weather:
                   </h1>
                   <button
                     type="button"
@@ -79,16 +68,6 @@ const RiverCard = ({ river, button}) => {
                 </div>
                 <div class="modal-body">test</div>
                 <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button>
                 </div>
               </div>
             </div>
@@ -129,7 +108,7 @@ const RiverCard = ({ river, button}) => {
         <div
           type="button"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal2"
+          data-bs-target= {"#"+river.modal}
           class="card-body "
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
@@ -139,7 +118,7 @@ const RiverCard = ({ river, button}) => {
           {/* modal popout */}
           <div
             class="modal fade"
-            id="exampleModal2"
+            id={river.modal}
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
@@ -148,7 +127,7 @@ const RiverCard = ({ river, button}) => {
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  {river.name}
+                  {river.name} Weather:
                   </h1>
                   <button
                     type="button"
@@ -159,16 +138,6 @@ const RiverCard = ({ river, button}) => {
                 </div>
                 <div class="modal-body">...</div>
                 <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button>
                 </div>
               </div>
             </div>
@@ -206,7 +175,7 @@ const RiverCard = ({ river, button}) => {
                 <div
           type="button"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal3"
+          data-bs-target= {"#"+river.modal}
           class="card-body "
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
@@ -216,7 +185,7 @@ const RiverCard = ({ river, button}) => {
           {/* modal popout */}
           <div
             class="modal fade"
-            id="exampleModal3"
+            id= {river.modal}
             tabindex="-1"
             aria-labelledby="exampleModalLabel"
             aria-hidden="true"
@@ -225,7 +194,7 @@ const RiverCard = ({ river, button}) => {
               <div class="modal-content">
                 <div class="modal-header">
                   <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  {river.name}
+                  {river.name} Weather:
                   </h1>
                   <button
                     type="button"
@@ -236,16 +205,6 @@ const RiverCard = ({ river, button}) => {
                 </div>
                 <div class="modal-body">...</div>
                 <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Save changes
-                  </button>
                 </div>
               </div>
             </div>
