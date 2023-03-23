@@ -865,7 +865,7 @@ useEffect(() =>{
   for (let i = 0; i < weatherTables.length; i++) {
   let item = weatherTables[i]; 
   fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=02ff44908fa541bb9ba214658232203 &q=${item.weather.lat},${item.weather.lon}&days=3&aqi=no&alerts=no`
+    `https://api.weatherapi.com/v1/forecast.json?key=02ff44908fa541bb9ba214658232203 &q=${item.weather.lat},${item.weather.lon}&days=3&aqi=no&alerts=no`
   )
     .then((response) => response.json())
     .then((data) => {
