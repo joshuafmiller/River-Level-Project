@@ -34,7 +34,7 @@ return(
           Precipitation: {river.weather.currentDay.precip} in
           </li>
           <li class="list-group-item fw-bolder">
-          Temperature: {Math.ceil(river.weather.currentDay.temp)}F
+          Temperature: {Math.ceil(river.weather.currentDay.temp)}&#8457;
           </li>
         </ul>
         <div
@@ -59,7 +59,7 @@ return(
           Precipitation Total: {river.weather.forecastDay1.precipTotal} in
           </li>
           <li class="list-group-item fw-bolder">
-          Temperature: {Math.ceil(river.weather.forecastDay1.tempMin)}F-{Math.ceil(river.weather.forecastDay1.tempMax)}F
+          Temperature: {Math.ceil(river.weather.forecastDay1.tempMin)}&#8457;-{Math.ceil(river.weather.forecastDay1.tempMax)}&#8457;
           </li>
         </ul>
         <div
@@ -85,7 +85,7 @@ return(
           Precipitation Total: {river.weather.forecastDay2.precipTotal} in
           </li>
           <li class="list-group-item fw-bolder">
-          Temperature: {Math.ceil(river.weather.forecastDay2.tempMin)}F-{Math.ceil(river.weather.forecastDay2.tempMax)}F
+          Temperature: {Math.ceil(river.weather.forecastDay2.tempMin)}&#8457;-{Math.ceil(river.weather.forecastDay2.tempMax)}&#8457;
           </li>
         </ul>
         <div
@@ -111,7 +111,7 @@ return(
           Precipitation Total: {river.weather.forecastDay3.precipTotal} in
           </li>
           <li class="list-group-item fw-bolder">
-          Temperature: {Math.ceil(river.weather.forecastDay3.tempMin)}F-{Math.ceil(river.weather.forecastDay3.tempMax)}F
+          Temperature: {Math.ceil(river.weather.forecastDay3.tempMin)}&#8457;-{Math.ceil(river.weather.forecastDay3.tempMax)}&#8457;
           </li>
         </ul>
         <div

@@ -6,8 +6,8 @@ const RiverCard = ({ river, button}) => {
 
 
   if (
-    (river.runnable == "runnable" && button == 3) ||
-    (river.runnable == "runnable" && button == 1)
+    (river.runnable == "Runnable" && button == 3) ||
+    (river.runnable == "Runnable" && button == 1)
   ) {
     
     return (
@@ -20,18 +20,17 @@ const RiverCard = ({ river, button}) => {
         </a>
         <ul class="list-group list-group-flush">
           <li class="list-group-item fw-bolder">
-            {river.level}
+            Level: {river.level}
             {river.unit}
           </li>
           <li class="list-group-item text-success fw-bolder">
-            {river.runnable}
+            Status: {river.runnable}
           </li>
           <li class="list-group-item fw-bolder">
-            {river.runnableLevel[0]}-{river.runnableLevel[1]}
-            {river.unit}
+            Range: {river.runnableLevel[0]}-{river.runnableLevel[1]}{river.unit}
           </li>
         </ul>
-        
+
 
         {/* make entire weather div a modal button */}
         <div
@@ -43,7 +42,7 @@ const RiverCard = ({ river, button}) => {
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
           <p class="fw-bold">{river.weather.currentDay.condition}</p>
-          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
+          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}&#8457;</p>
 
 {/* data here */}
         <ModalContent river={river}/>
@@ -56,8 +55,8 @@ const RiverCard = ({ river, button}) => {
 
   }
   if (
-    (river.runnable == "high" && button == 4) ||
-    (river.runnable == "high" && button == 1)
+    (river.runnable == "High" && button == 4) ||
+    (river.runnable == "High" && button == 1)
   ) {
     return (
       <div class="card m-2 text-center high" style={{ width: "18rem" }}>
@@ -69,14 +68,14 @@ const RiverCard = ({ river, button}) => {
         </a>
         <ul class="list-group list-group-flush">
           <li class="list-group-item fw-bolder">
-            {river.level}
+            Level: {river.level}
             {river.unit}
           </li>
-          <li class="list-group-item text-danger fw-bolder">
-            {river.runnable}
+          <li class="list-group-item text-primary fw-bolder">
+            Status: {river.runnable}
           </li>
           <li class="list-group-item fw-bolder">
-            {river.runnableLevel[0]}-{river.runnableLevel[1]}
+            Range: {river.runnableLevel[0]}-{river.runnableLevel[1]}
             {river.unit}
           </li>
         </ul>
@@ -88,7 +87,7 @@ const RiverCard = ({ river, button}) => {
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
           <p class="fw-bold">{river.weather.currentDay.condition}</p>
-          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
+          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}&#8457;</p>
 
           <ModalContent river={river}/>
                  
@@ -100,8 +99,8 @@ const RiverCard = ({ river, button}) => {
   }
 
   if (
-    (river.runnable == "low" && button == 2) ||
-    (river.runnable == "low" && button == 1)
+    (river.runnable == "Low" && button == 2) ||
+    (river.runnable == "Low" && button == 1)
   ) {
     return (
       <div class="card m-2 text-center low" style={{ width: "18rem" }}>
@@ -113,14 +112,14 @@ const RiverCard = ({ river, button}) => {
         </a>
         <ul class="list-group list-group-flush">
           <li class="list-group-item fw-bolder">
-            {river.level}
+            Level: {river.level}
             {river.unit}
           </li>
           <li class="list-group-item text-danger fw-bolder">
-            {river.runnable}
+            Status: {river.runnable}
           </li>
           <li class="list-group-item fw-bolder">
-            {river.runnableLevel[0]}-{river.runnableLevel[1]}
+            Range: {river.runnableLevel[0]}-{river.runnableLevel[1]}
             {river.unit}
           </li>
         </ul>
@@ -132,7 +131,7 @@ const RiverCard = ({ river, button}) => {
         >
           <img type="button" src={river.weather.currentDay.icon}></img>
           <p class="fw-bold">{river.weather.currentDay.condition}</p>
-          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}F</p>
+          <p class="fw-bold">{Math.ceil(river.weather.currentDay.temp)}&#8457;</p>
 
           {/* modal popout */}
           <ModalContent river={river}/>

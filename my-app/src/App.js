@@ -859,13 +859,13 @@ useEffect(() => {
               riverTables[j].level >= riverTables[j].runnableLevel[0] &&
               riverTables[j].level <= riverTables[j].runnableLevel[1]
             ) {
-              riverTables[j].runnable = "runnable";
+              riverTables[j].runnable = "Runnable";
             }
             if (riverTables[j].level > riverTables[j].runnableLevel[1]) {
-              riverTables[j].runnable = "high";
+              riverTables[j].runnable = "High";
             }
             if (riverTables[j].level < riverTables[j].runnableLevel[0]) {
-              riverTables[j].runnable = "low";
+              riverTables[j].runnable = "Low";
             }
             
           }
