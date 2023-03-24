@@ -12,10 +12,26 @@ import { useState } from "react";
 import RiverData from "./data/RiverData.json";
 
 function App() {
-
+  //creating variables used in state
   let riverMaster = RiverData;
+  let filterValue = 1;
 
+  //setting state for the river data
   const [riverTables, setData] = useState(riverMaster);
+  //setting state to be used for the upcoming weather API call
+  const [weatherTables, setTable] = useState(riverTables);
+  //state used for the filter view button clicks
+  let [buttonPressed, setButton] = useState(filterValue);
+  //setting state, will change to false once all data has been loopped through
+  //this is used to show a loading screen during this time
+  const [isLoading, setLoading] = useState(true);
+
+  //on button click function to use for filters
+  function ChangeButton(value) {
+    buttonPressed = value;
+    console.log(buttonPressed);
+    setButton(buttonPressed);
+  }
 
   //fetching usgs data
   useEffect(() => {
@@ -93,13 +109,6 @@ function App() {
       });
   }, []);
 
-  //setting state to be used for the upcoming weather API call
-  const [weatherTables, setTable] = useState(riverTables);
-
-  //setting state, will change to false once all data has been loopped through
-  //this is used to show a loading screen during this time
-  const [isLoading, setLoading] = useState(true);
-
   //fetching weather data
   useEffect(() => {
     //looping through the master river list to make api request with lat/lon of each
@@ -174,17 +183,7 @@ function App() {
     }
   }, [riverTables]);
 
-  //on button click to use for filters
-  let filterValue = 1;
-
-  let [buttonPressed, setButton] = useState(filterValue);
-
-  function ChangeButton(value) {
-    buttonPressed = value;
-    console.log(buttonPressed);
-    setButton(buttonPressed);
-  }
-
+  //loading page while looping through the weather API calls
   if (isLoading) {
     return (
       <div
