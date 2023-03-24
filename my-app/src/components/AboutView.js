@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import kayak from "./kayak.jpg";
+import kayak from "../data/kayak.jpg";
 
 const About = () => {
   return (

@@ -1,18 +1,28 @@
+import ModalForecast from "./ModalForecast"
+
+
+
 //TODO cut down on forecast days and removed unused classes/IDs
 const ModalContent = ({ river }) => {
+
+
+let day1 = river.weather.forecastDay1;
+let day2 = river.weather.forecastDay2;
+let day3 = river.weather.forecastDay3;
+
+
   return (
     <div
       class="modal fade"
       id={river.modal}
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-xl modal-dialog-centered container">
         <div class="modal-content">
           <div class="row" style={{ width: "1100px", marginLeft: "0" }}>
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
+              <h1 class="modal-title fs-5">
                 {river.name} Weather
               </h1>
               <button
@@ -24,11 +34,11 @@ const ModalContent = ({ river }) => {
             </div>
 
             {/* modal body */}
-            {/* <div class="row" style={{ width: "1116px" }}> */}
             <div
               class="card m-2 text-center col d-inline-block align-middle"
               style={{ width: "18rem" }}
             >
+              {/* current day card */}
               <div class="card-body">
                 <h5 class="card-title fw-bolder">Current</h5>
                 <p class="card-text"></p>
@@ -45,111 +55,17 @@ const ModalContent = ({ river }) => {
                   &#8457;
                 </li>
               </ul>
-              <div class="card-body" id="runnable">
+              <div class="card-body">
                 <img src={river.weather.currentDay.icon}></img>
                 <p class="fw-bold">
                   Condition: {river.weather.currentDay.condition}
                 </p>
               </div>
             </div>
-            {/* day 1 forecast */}
-            <div
-              class="card m-2 text-center col d-inline-block"
-              style={{ width: "18rem" }}
-            >
-              <div class="card-body">
-                <h5 class="card-title fw-bolder">
-                  {river.weather.forecastDay1.date.substring(6, 11)}
-                </h5>
-                <p class="card-text"></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item fw-bolder">
-                  Precipitation Chance:{" "}
-                  {river.weather.forecastDay1.precipChance}%
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Precipitation Total: {river.weather.forecastDay1.precipTotal}{" "}
-                  in
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Temperature: {Math.ceil(river.weather.forecastDay1.tempMin)}
-                  &#8457;-{Math.ceil(river.weather.forecastDay1.tempMax)}&#8457;
-                </li>
-              </ul>
-
-              <div class="card-body" id="runnable">
-                <img src={river.weather.forecastDay1.icon}></img>
-                <p class="fw-bold">
-                  Condition: {river.weather.forecastDay1.condition}
-                </p>
-              </div>
-            </div>
-
-            {/* day 2 forecast */}
-            <div
-              class="card text-center m-2 col d-inline-block"
-              style={{ width: "18rem" }}
-            >
-              <div class="card-body d-inline-block">
-                <h5 class="card-title fw-bolder">
-                  {river.weather.forecastDay2.date.substring(6, 11)}
-                </h5>
-                <p class="card-text"></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item fw-bolder">
-                  Precipitation Chance:{" "}
-                  {river.weather.forecastDay2.precipChance}%
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Precipitation Total: {river.weather.forecastDay2.precipTotal}{" "}
-                  in
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Temperature: {Math.ceil(river.weather.forecastDay2.tempMin)}
-                  &#8457;-{Math.ceil(river.weather.forecastDay2.tempMax)}&#8457;
-                </li>
-              </ul>
-              <div class="card-body" id="runnable">
-                <img src={river.weather.forecastDay2.icon}></img>
-                <p class="fw-bold">
-                  Condition: {river.weather.forecastDay2.condition}
-                </p>
-              </div>
-            </div>
-            {/* day 3  forecast*/}
-            <div
-              class="card m-2 text-center col d-inline-block"
-              style={{ width: "18rem" }}
-            >
-              <div class="card-body d-inline-block">
-                <h5 class="card-title fw-bolder">
-                  {river.weather.forecastDay3.date.substring(6, 11)}
-                </h5>
-                <p class="card-text"></p>
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item fw-bolder">
-                  Precipitation Chance:{" "}
-                  {river.weather.forecastDay3.precipChance}%
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Precipitation Total: {river.weather.forecastDay3.precipTotal}{" "}
-                  in
-                </li>
-                <li class="list-group-item fw-bolder">
-                  Temperature: {Math.ceil(river.weather.forecastDay3.tempMin)}
-                  &#8457;-{Math.ceil(river.weather.forecastDay3.tempMax)}&#8457;
-                </li>
-              </ul>
-              <div class="card-body" id="runnable">
-                <img src={river.weather.forecastDay3.icon}></img>
-                <p class="fw-bold">
-                  Condition: {river.weather.forecastDay3.condition}
-                </p>
-              </div>
-            </div>
+            {/* forecast cards */}
+            <ModalForecast forecast={day1}/>
+            <ModalForecast forecast={day2}/>
+            <ModalForecast forecast={day3}/>
           </div>
         </div>
       </div>

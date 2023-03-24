@@ -1,5 +1,5 @@
 import Hero from "./Hero";
-import ellie from "./ellie.jpg";
+import ellie from "../data/ellie.jpg";
 
 const Contact = () => {
   return (

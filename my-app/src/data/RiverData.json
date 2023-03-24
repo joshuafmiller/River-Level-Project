@@ -1,0 +1,785 @@
+[
+    {
+    "name": "Big Laurel",
+    "ID": "03453000",
+    "modal": "BigLaurel", 
+    "unit": "cfs", 
+    "runnableLevel": [250, 2000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+},
+{
+    "name": "Big Creek Lower",
+    "ID": "03512000",
+    "modal": "BigCreekLower", 
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [1200, 2700], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1038/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Chattooga III",
+    "ID": "02177000",
+    "modal": "ChattoogaIII", 
+    "level": null,
+    "unit": "ft", 
+    "runnableLevel": [1.2, 3.0], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/475/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Chattooga IV",
+    "ID": "02177000",
+    "modal": "ChattoogaIV",
+    "level": null,
+    "unit": "ft",
+    "runnableLevel": [0.9, 2.5], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/476/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Cheoah",
+    "ID": "0351706800",
+    "modal": "Cheoah", 
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [400, 2500], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/3146/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Falls Dam",
+    "ID": "02087183",
+    "modal": "FallsDam", 
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [650, 4000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/3869/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "French Broad IX",
+    "ID": "03453500", 
+    "modal": "FrenchBroadIX",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [700, 7000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1074/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Haw",
+    "ID": "02096960", 
+    "modal": "Haw",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [1001, 12000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/2706/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Linville Gorge",
+    "ID": "02138500",
+    "modal": "LinvilleGorge", 
+    "level": null,
+    "unit": "ft", 
+    "runnableLevel": [1.7, 2.7], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1039/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Nantahala",
+    "ID": "03505550", 
+    "modal": "Nantahala",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [450, 2000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1109/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "feelsLike": null,
+        "temp": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Nolichucky",
+    "ID": "03465500", 
+    "modal": "Nolichucky",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [500, 3000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1106/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "feelsLike": null,
+        "temp": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Pigeon Gorge",
+    "ID": "03460795", 
+    "modal": "PigeonGorge",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [300, 3000], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1108/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Tellico",
+    "ID": "03518500", 
+    "modal": "Tellico",
+    "level": null,
+    "unit": "cfs", 
+    "runnableLevel": [280, 1500], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Tellico Middle",
+    "ID": "03518500", 
+    "modal": "TellicoMiddle",
+    "level": null,
+    "unit": "ft", 
+    "runnableLevel": [1.4, 4.0], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1791/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Watauga",
+    "ID": "03479000", 
+    "modal": "Watauga",
+    "level": null,
+    "unit": "cfs",
+    "runnableLevel": [150, 650], 
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1143/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  },
+  {
+    "name": "Wilson Creek",
+    "ID": "02140510", 
+    "modal": "WilsonCreek",
+    "level": null,
+    "unit": "ft", 
+    "runnableLevel": [2.25, 5.0],
+    "runnable": null,
+    "awpage":
+      "https://www.americanwhitewater.org/content/River/view/river-detail/1146/main",
+    "weather": {
+      "lat": null,
+      "lon": null,
+      "currentDay": {
+        "temp": null,
+        "feelsLike": null,
+        "condition": null,
+        "icon": null,
+        "precip": null
+      },
+      "forecastDay1": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay2": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      },
+      "forecastDay3": {
+        "date": "defaultdatehere",
+        "tempMin": null,
+        "tempMax": null,
+        "condition": null,
+        "icon": null,
+        "precipTotal": null,
+        "precipChance": null
+      }
+    }
+  }
+]
