@@ -1,20 +1,21 @@
 import "./App.css";
 import React, { useEffect } from "react";
-import { Switch, Route, renderMatches } from "react-router-dom";
+import { Switch, Route,} from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
 import Home from "./components/Home";
 import About from "./components/AboutView";
 import Contact from "./components/ContactView";
 import Footer from "./components/Footer";
 import RiverView from "./components/RiverView";
 import FilterView from "./components/FilterView";
-import { useState, setState } from "react";
+import { useState} from "react";
 
 
 function App() {
 
-//master river list
+//master river array
+//please collapse for visibility
+
   let riverMaster = [
     {
       name: "Big Laurel",
@@ -31,6 +32,7 @@ function App() {
         lon: null,
         currentDay: {
           temp: null,
+          feelsLike: null,
           condition : null,
           icon : null,
           precip : null,
@@ -80,6 +82,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -129,6 +132,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -178,6 +182,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -227,6 +232,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -276,6 +282,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -325,6 +332,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -374,6 +382,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -423,6 +432,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -471,6 +481,7 @@ function App() {
           lat: null,
           lon: null,
           currentDay: {
+            feelsLike: null,
             temp: null,
             condition : null,
             icon : null,
@@ -520,6 +531,7 @@ function App() {
           lat: null,
           lon: null,
           currentDay: {
+            feelsLike: null,
             temp: null,
             condition : null,
             icon : null,
@@ -570,6 +582,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -619,6 +632,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -668,6 +682,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -717,6 +732,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -766,6 +782,7 @@ function App() {
           lon: null,
           currentDay: {
             temp: null,
+            feelsLike: null,
             condition : null,
             icon : null,
             precip : null,
@@ -874,21 +891,13 @@ useEffect(() => {
     });
   },[]);
 
+
+  //setting state to be used for the upcoming weather API call
   const [weatherTables, setTable] = useState(riverTables);
 
-
-
-
+//setting state, will change to false once all data has been loopped through
+//this is used to show a loading screen during this time
   const [isLoading, setLoading] = useState(true);
-
-
-
-
-
-
-
-
-
 
 //fetching weather data
 useEffect(() =>{
@@ -908,6 +917,7 @@ useEffect(() =>{
       item.weather.currentDay.temp = (data.current.temp_f);
       item.weather.currentDay.icon = data.current.condition.icon;
       item.weather.currentDay.precip = data.current.precip_in;
+      item.weather.currentDay.feelsLike = data.current.feelslike_f;
 
       
 
@@ -919,6 +929,7 @@ useEffect(() =>{
       item.weather.forecastDay1.icon = data.forecast.forecastday[0].day.condition.icon
       item.weather.forecastDay1.precipTotal = data.forecast.forecastday[0].day.totalprecip_in
       item.weather.forecastDay1.precipChance = data.forecast.forecastday[0].day.daily_chance_of_rain
+      
 
       //updating day2 values
       item.weather.forecastDay2.date = data.forecast.forecastday[1].date
@@ -937,10 +948,10 @@ useEffect(() =>{
       item.weather.forecastDay3.icon = data.forecast.forecastday[2].day.condition.icon
       item.weather.forecastDay3.precipTotal = data.forecast.forecastday[2].day.totalprecip_in
       item.weather.forecastDay3.precipChance = data.forecast.forecastday[2].day.daily_chance_of_rain
-      console.log(item)
 
+
+    //checking to see when all API calls for weather are complete and set the state to false to remove the loading screen on the final API call
       let num = i
-      console.log(num)
 
       if (num == weatherTables.length-1) {
         setLoading(false)
@@ -964,18 +975,6 @@ useEffect(() =>{
         setButton(buttonPressed)
     };
 
-
-  // let modalNumber = 1;
-  // let [modalNext, setModal] = useState(modalNumber)  
-
-  //   function ModalChange(value){
-  //     modalNext = value + 1
-
-  //    document.getElementById("exampleModal1").id = `exampleModal${modalNext}`
-
-  //     setModal(modalNext)
-  //   }
-  
     if (isLoading) {
       return (
       <div style={{
@@ -987,7 +986,7 @@ useEffect(() =>{
       }}>Loading the data {console.log("loading state")}</div>
     );
     }
-// stuff
+
     return (
       <div>
         <Navbar />

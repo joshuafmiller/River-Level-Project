@@ -1,6 +1,7 @@
 import React from "react";
 import ModalContent from "./ModalContent";
-import { useState, setState } from "react";
+
+//TODO cut down on cards and remove unused classes/IDs
 
 const RiverCard = ({ river, button}) => {
 
