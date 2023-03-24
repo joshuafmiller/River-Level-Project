@@ -987,7 +987,7 @@ useEffect(() =>{
       }}>Loading the data {console.log("loading state")}</div>
     );
     }
-
+// stuff
     return (
       <div>
         <Navbar />
